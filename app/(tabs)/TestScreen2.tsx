@@ -61,6 +61,9 @@ export default function TestScreen2() {
                   { backgroundColor: getBtnBackgroundColor(btn) },
                 ]}
                 activeOpacity={0.7} // 눌렀을 때 깜빡임 효과
+                onPress={() => {
+                  btn;
+                }}
               >
                 <Text
                   style={[styles.buttonText, { color: getBtnTextColor(btn) }]}
