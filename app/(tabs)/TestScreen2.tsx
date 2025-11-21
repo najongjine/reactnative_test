@@ -122,7 +122,7 @@ export default function TestScreen2() {
         setMyinput((prev) => prev + btn);
         break;
       default:
-        setMyinput((prev) => prev + btn);
+        setMyinput((prev) => prev + btn); // "7" + "x" -> 7x9
         break;
     }
   };
@@ -130,6 +130,12 @@ export default function TestScreen2() {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" />
+      <View>
+        {/* 결과 값 */}
+        <Text style={styles.displayText} numberOfLines={1}>
+          결과 : {result}
+        </Text>
+      </View>
 
       {/* 상단 결과창 영역 */}
       <View style={styles.displayContainer}>
@@ -142,11 +148,6 @@ export default function TestScreen2() {
         {/* 입력 값 */}
         <Text style={styles.inputDisplayText} numberOfLines={2}>
           {myinput}
-        </Text>
-
-        {/* 결과 값 */}
-        <Text style={styles.displayText} numberOfLines={1}>
-          {result}
         </Text>
       </View>
 
