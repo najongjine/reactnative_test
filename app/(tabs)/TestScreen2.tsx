@@ -63,7 +63,7 @@ export default function TestScreen2() {
   };
 
   const [myinput, setMyinput] = useState<string>("");
-  const [result, setResult] = useState<string>("0");
+  const [result, setResult] = useState<string>("");
 
   /* 버튼 처리 함수 (기존 로직 유지) */
   const handlePress = (btn: string) => {
@@ -83,6 +83,7 @@ export default function TestScreen2() {
           const calculatedResult = evaluate(expression).toString();
           setResult(calculatedResult);
           setMyinput(calculatedResult);
+          setMyinput("");
         } catch (error) {
           setResult("Error");
           setMyinput("");
