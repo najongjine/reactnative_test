@@ -1,15 +1,21 @@
 import { useState } from "react";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 //react-native-reanimated
 export default function TestScreen1() {
   const [myinput, setMyinput] = useState<string>("");
 
+  /* mathjs 문서를 보고, evaluate 을 수행할수 있는 함수를 만드시오 */
   return (
     <ScrollView>
       <View>
         <Text style={{ color: "green" }}>test1 screen 이에요</Text>
-        <input placeholder="입력칸" />
+        <Text>입력 확인용: {myinput}</Text>
+        <TextInput
+          value={myinput}
+          placeholder="입력칸"
+          onChangeText={setMyinput}
+        />
       </View>
     </ScrollView>
   );
