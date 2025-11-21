@@ -6,9 +6,9 @@ import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 export default function TestScreen1() {
   const [myinput, setMyinput] = useState<string>("");
 
-  /* mathjs 문서를 보고, evaluate 을 수행할수 있는 함수를 만드시오 */
+  /* 계산하기 버튼 누르면 결과 보여주기 */
   async function calc() {
-    evaluate(`1+2`);
+    evaluate(myinput);
   }
   return (
     <ScrollView>
